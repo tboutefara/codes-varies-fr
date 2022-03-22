@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Jan 18 11:19:27 GMT+01:00 2022:
+Amorçage de Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585) : instance a816c00e-017e-6cb2-ce41-00000386f8c8 
+dans le répertoire de base de données D:\DevPortfolio\CodesVaries_fr\java\ContactsBDD\ContactsBDD\contacts avec le chargeur de classe jdk.internal.loader.ClassLoaders$AppClassLoader@5c29bfd
+Chargé de file:/D:/Application/db-derby-10.15.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.7+8-LTS
+user.dir=D:\DevPortfolio\CodesVaries_fr\java\ContactsBDD\ContactsBDD
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Chargeur de classe de la base de données démarré - derby.database.classpath = ''

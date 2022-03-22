@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title>Calcultarice Simple</title>
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+            var operand01 = 0;
+            var operand02 = 0;
+            var operation = "";
+            var debutSaisie = true;
+            var contientVirgule = false;
+            var resultat = 0;
+        </script>
+    </head>
+    <body>
+        <div class="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" class="form-control" id="affichage" dir="rtl" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75 number">1</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75 number">3</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75 number">2</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75 operation">+</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75 number">4</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75 number">5</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75 number">6</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75 operation">-</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75 number">7</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75 number">8</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75 number">9</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75 operation">x</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75" id="virgule">.</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75 number">0</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75" id="signe">-/+</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75 operation">/</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75" id="effacer">&lt;-</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75" id="effacerOperand">CE</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75" id="effacerTout">C</button></div>
+                    <div class="col-sm-3 col-3 my-cell"><button class="btn btn-primary center w-75" id="egale">=</button></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="./node_modules/jquery/dist/jquery.js"></script>
+        <script src="script.js"></script>
+
+        <script>
+            $("document").ready(function(){
+                $(".number").click(
+                    function(){
+                        if(debutSaisie){
+                            $("#affichage").attr("value", this.innerHTML);
+                            debutSaisie = false;
+                        }else{
+                            $("#affichage").attr("value", $("#affichage").attr("value") + this.innerHTML);
+                        }
+                    }
+                );
+
+                $(".operation").click(
+                    function(){
+                        var o = this.innerHTML;
+
+                        if(operation == ""){
+                            operand01 = parseFloat($("#affichage").attr("value"));
+                        }else{
+                            operand02 = parseFloat($("#affichage").attr("value"));
+                            resultat = calculer(operand01, operand02, operation);
+                            $("#affichage").attr("value", resultat);
+                            operand01 = resultat;
+                        }
+
+                        operation = o;
+                        debutSaisie = true;
+                        contientVirgule = false;
+                    }
+                );
+
+                $("#egale").click(
+                    function(){
+                        if (operation != ""){
+                            operand02 = parseFloat($("#affichage").attr("value"));
+                            resultat = calculer(operand01, operand02, operation);
+                            $("#affichage").attr("value", resultat);
+                            debutSaisie = true;
+                            contientVirgule = false;
+                            operation = "";
+                        }
+                    }
+                );
+
+                $("#signe").click(
+                    function(){
+                        var a = $("#affichage").attr("value");
+                        if(a[0] == "-"){
+                            $("#affichage").attr("value", a.substring(1));
+                        }else{
+                            $("#affichage").attr("value", "-" + a);
+                        }
+                    }
+                );
+
+                $("#virgule").click(
+                    function(){
+                        if(!contientVirgule){
+                            $("#affichage").attr("value", $("#affichage").attr("value") + ".");
+                            contientVirgule = true;
+                            debutSaisie = false;
+                        }
+                    }
+                );
+
+                $("#effacer").click(
+                    function(){
+                        var a = $("#affichage").attr("value");
+                        if(a.length == 1){
+                            $("#affichage").attr("value", "0"); 
+                        }else{
+                            $("#affichage").attr("value", a.substring(0, a.length - 1)); 
+                        } 
+                    }
+                );
+
+                $("#effacerOperand").click(
+                    function(){
+                        debutSaisie = true;
+                        contientVirgule = false;
+                        $("#affichage").attr("value", "0");
+                    }
+                );
+
+                $("#effacerTout").click(
+                    function(){
+                        debutSaisie = true;
+                        contientVirgule = false;
+                        $("#affichage").attr("value", "0");
+                        operation = "";
+                    }
+                );
+
+                $("#affichage").attr("value", "0");
+            });
+           
+        </script>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="com.tarekboutefara.nbplatform.helloworldmodel">
+    <module_version install_time="1637796709786" last="true" origin="installer" specification_version="1.0">
+        <file crc="1988633142" name="config/Modules/com-tarekboutefara-nbplatform-helloworldmodel.xml"/>
+        <file crc="2451305642" name="modules/com-tarekboutefara-nbplatform-helloworldmodel.jar"/>
+    </module_version>
+</module>

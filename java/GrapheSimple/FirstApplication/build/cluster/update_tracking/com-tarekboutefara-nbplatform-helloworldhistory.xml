@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="com.tarekboutefara.nbplatform.helloworldhistory">
+    <module_version install_time="1637796720737" last="true" origin="installer" specification_version="1.0">
+        <file crc="79456618" name="config/Modules/com-tarekboutefara-nbplatform-helloworldhistory.xml"/>
+        <file crc="3954226584" name="modules/com-tarekboutefara-nbplatform-helloworldhistory.jar"/>
+    </module_version>
+</module>

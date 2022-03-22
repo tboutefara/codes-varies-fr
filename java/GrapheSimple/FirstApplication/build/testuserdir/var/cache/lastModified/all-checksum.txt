@@ -1,0 +1,9 @@
+C:\Program Files\NetBeans-11.3\netbeans\platform=1582291192000
+cluster.D:/DevPortfolio/CodesVaries_fr/java/GrapheSimple/FirstApplication/build/cluster=1637796721187
+cluster.C:/Program Files/NetBeans-11.3/netbeans/platform=1582291192000
+user=1637796721187
+crc=7
+locale=fr_FR
+branding=firstapplication
+java.version=11.0.7
+java.vm.version=11.0.7+8-LTS

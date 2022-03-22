@@ -1,0 +1,18 @@
+Contact :
+	Informations obligatoires :
+		code (auto)
+		nom
+		prénom
+		adresse
+		numéro de téléphone
+	Informations faculaives
+		autre adresse
+		autre numéro de téléphone
+		fax
+		email
+		site web personnel
+		profession
+		adresse professionnelle
+		numéro de téléphone professionnel
+		site web professionnel
+		

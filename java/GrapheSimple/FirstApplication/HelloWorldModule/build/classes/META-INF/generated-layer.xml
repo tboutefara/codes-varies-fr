@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="xml">
+        <folder name="entities">
+            <folder name="com_tarekboutefara_nbplatform_helloworld">
+                <file name="HelloWorld" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--com.tarekboutefara.nbplatform.helloworld.HelloWorldTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//com.tarekboutefara.nbplatform.helloworld//HelloWorld//EN"/>
+                </file>
+            </folder>
+        </folder>
+        <folder name="memory">
+            <folder name="com">
+                <folder name="tarekboutefara">
+                    <folder name="nbplatform">
+                        <folder name="helloworld">
+                            <file name="HelloWorldTopComponent">
+                                <!--com.tarekboutefara.nbplatform.helloworld.HelloWorldTopComponent-->
+                                <attr name="settings.providerPath" stringvalue="xml/lookups//com_tarekboutefara_nbplatform_helloworld/HelloWorld.instance"/>
+                            </file>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+        </folder>
+        <folder name="lookups">
+            <folder name="com_tarekboutefara_nbplatform_helloworld">
+                <file name="HelloWorld.instance">
+                    <!--com.tarekboutefara.nbplatform.helloworld.HelloWorldTopComponent-->
+                    <attr methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="com.tarekboutefara.nbplatform.helloworld.HelloWorldTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="com.tarekboutefara.nbplatform.helloworld.HelloWorldTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+            </folder>
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="Window">
+            <file name="com-tarekboutefara-nbplatform-helloworld-HelloWorldTopComponent.shadow">
+                <!--com.tarekboutefara.nbplatform.helloworld.HelloWorldTopComponent-->
+                <attr name="originalFile" stringvalue="Actions/Window/com-tarekboutefara-nbplatform-helloworld-HelloWorldTopComponent.instance"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Windows2">
+        <folder name="Components">
+            <file name="HelloWorldTopComponent.settings">
+                <!--com.tarekboutefara.nbplatform.helloworld.HelloWorldTopComponent-->
+                <![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="com.tarekboutefara.nbplatform.helloworld.HelloWorldTopComponent"/>
+</settings>
+]]>
+            </file>
+        </folder>
+        <folder name="Modes">
+            <folder name="editor">
+                <file name="HelloWorldTopComponent.wstcref">
+                    <!--com.tarekboutefara.nbplatform.helloworld.HelloWorldTopComponent-->
+                    <![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="HelloWorldTopComponent"/>
+  <state opened="true"/>
+</tc-ref>
+]]>
+                </file>
+            </folder>
+        </folder>
+    </folder>
+    <folder name="Actions">
+        <folder name="Window">
+            <file name="com-tarekboutefara-nbplatform-helloworld-HelloWorldTopComponent.instance">
+                <!--com.tarekboutefara.nbplatform.helloworld.HelloWorldTopComponent-->
+                <attr methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
+                <attr name="component" newvalue="com.tarekboutefara.nbplatform.helloworld.HelloWorldTopComponent"/>
+                <attr name="preferredID" stringvalue="HelloWorldTopComponent"/>
+                <attr bundlevalue="com.tarekboutefara.nbplatform.helloworld.Bundle#CTL_HelloWorldAction" name="displayName"/>
+            </file>
+        </folder>
+    </folder>
+</filesystem>
